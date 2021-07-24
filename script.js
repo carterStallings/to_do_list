@@ -1,6 +1,7 @@
 window.addEventListener("load", function() {
     let form = document.querySelector("form");
     let submit = document.getElementById("formSubmit");
+    let toDoItems = [];
     
     form.addEventListener("submit", function(event) {
         let taskInput = document.querySelector("input[name=addTask]");
@@ -13,23 +14,18 @@ window.addEventListener("load", function() {
          // stop the form submission
          event.preventDefault();
       } else {
-         Number(taskInput.value);
-         let numberTest1 = (isNaN(taskInput.value))
-         if (numberTest1 === false) {
-            alert("Friend Name must be String!");
-            // stop the form submission
-            event.preventDefault();
-         }
-         if (numberTest1 === true) {
-            validate = true
-         }
+         validate = true;
       }
 
       if (validate = true) {
+            // toDoItems.push(taskInput.value);
+            // for (i = 0; i < toDoItems.length; i ++) {
+            //    list.innerHTML = i;
             list.innerHTML = taskInput.value;    
             faulty.style.visibility = "visible";
             event.preventDefault();
       }
+            
         
     });
 
